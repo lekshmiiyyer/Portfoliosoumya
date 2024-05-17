@@ -2,12 +2,27 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import leaf from "../../Assets/Projects/water.png";
+import emotion from "../../Assets/Projects/carbon.png";
+import editor from "../../Assets/Projects/autores.png";
+import chatify from "../../Assets/Projects/firstcook.png";
+import suicide from "../../Assets/Projects/quiz.png";
+import diab from "../../Assets/Projects/diab.png";
+import bitsOfCode from "../../Assets/Projects/cookclique.png";
+import resmilar from "../../Assets/Projects/resmilar.png";
+import {
+ SiFigma,
+ SiReact,
+ SiNextdotjs,
+ SiCss3,
+ SiSpringboot,
+ SiMongodb,
+ SiTailwindcss,
+ SiPython,
+ SiGooglecolab,
+ SiDialogflow
+} from "react-icons/si";
+
 
 function Projects() {
   return (
@@ -25,10 +40,12 @@ function Projects() {
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="FOOD4LIFE"
+              description="
+              Welcome to FOOD4LIFE's Online Hub! Step into the world of FOOD4LIFE through our digital platform, where our Figma prototype showcases the essence of our restaurant experience. Explore our meticulously curated menu featuring a diverse array of dishes inspired by flavors from around the world, from hearty comfort foods to gourmet delicacies. "
+              demoLink="https://www.figma.com/proto/otHA92kV1jZtMgxTrZuv4F/THE-FOOD4LIFE-RESTAURANT?node-id=22-4&t=e2LUvDlkFUqKa6VF-1&scaling=contain&page-id=21%3A5&starting-point-node-id=22%3A4&show-proto-sidebar=1"
+              techStackIcons={[<SiFigma/>]}
+            
             />
           </Col>
 
@@ -36,21 +53,23 @@ function Projects() {
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="CookClique"
+              description="This platform streamlines recipe sharing, connecting local cooks, fostering community discussions, and facilitating skill enhancement through events. Users can discover new recipes, find nearby cooking enthusiasts for ingredient sharing, troubleshoot cooking challenges in forums. It simplifies culinary tasks, promotes knowledge exchange, and enhances cooking experiences."
+              demoLink="https://www.figma.com/proto/lu0XdFrSAhg4MQD8DC0mul/Untitled?node-id=4-79&t=urhEqx44CE34KljK-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2"
+              techStackIcons={[<SiFigma/>]}
             />
           </Col>
-
+          
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={editor}
+              style={{ height: "700px" }}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="AutoRes"
+              description="AutoRes offers a streamlined resume-building experience with its live reflection feature. Its plain front-end design provides simplicity, while its advanced functionality opens doors to future enhancements and expansions. With AutoRes, users enjoy a user-friendly interface and the potential for ongoing improvements, making it a promising tool in the resume creation landscape."
+              // ghLink="https://github.com/lekshmiiyyer"
+              // demoLink="https://editor.soumya-jit.tech/"  
+              techStackIcons={[<SiReact/>,<SiNextdotjs/>,<SiCss3/>,<SiTailwindcss/>,<SiSpringboot/>,<SiMongodb/> ]}           
             />
           </Col>
 
@@ -58,10 +77,11 @@ function Projects() {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Water Consumption Monitor"
+              description="The Water Consumption Monitor, designed in Figma, offers a user-friendly solution for tracking household water usage. With intuitive data visualization, users can monitor daily consumption across activities like bathing and cooking, empowering households to conserve resources effectively while promoting sustainable habits. Leveraging Figma's versatile tools, this interface provides a modern and visually engaging experience, making water conservation a seamless part of daily life."
+              // ghLink="https://github.com/soumyajit4419/Plant_AI"
+              demoLink="https://www.figma.com/proto/VbsOVI1zXgxWH4X3iiWRV8/The-Figma-Basics?t=Qr809JxqWqJfGco0-1&scaling=min-zoom&page-id=0%3A1&node-id=4-2&starting-point-node-id=4%3A2"
+              techStackIcons={[<SiFigma/>]}
             />
           </Col>
 
@@ -69,10 +89,11 @@ function Projects() {
             <ProjectCard
               imgPath={suicide}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="React Quiz App"
+              description="Introducing a React Quiz App, application designed to test users' knowledge of React concepts. With a user-friendly interface, the app presents a series of questions related to React development.Users can engage in an interactive quiz experience, reinforcing their understanding of React while enjoying a fun and educational activity. "
+              ghLink="https://github.com/lekshmiiyyer/React-Quiz-Mine"
+              demoLink="https://know-react-quiz.netlify.app"
+              techStackIcons={[<SiReact/>]}
             />
           </Col>
 
@@ -80,11 +101,33 @@ function Projects() {
             <ProjectCard
               imgPath={emotion}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Carbon Credit Calculator"
+              description="Embark on sustainability with our in-progress Carbon Footprint Tracker and Credits Trading Platform. Our solution streamlines emissions tracking and carbon credits trading, empowering users to offset their footprint and support green initiatives effortlessly."
+              //ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+               demoLink="https://www.figma.com/proto/b6MXrazRBtQWX1ZkHvpCCK/The-footprint?node-id=90-126&t=jxfFdVvRjm18KdU1-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=90%3A126"
+               techStackIcons={[<SiFigma/>]}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={resmilar}
+              isBlog={false}
+              title="Resume Similarity Calc"
+              description="Introducing our Resume Similarity Calculator, a tool designed to assess the percentage match of a resume to provided descriptors. This innovative solution evaluates resumes against predefined criteria, providing users with a comprehensive analysis of how well their qualifications align with job requirements or other specified criteria. By leveraging advanced algorithms and data analytics, our calculator offers accurate and insightful feedback, empowering individuals to optimize their resumes for maximum impact in job applications and beyond."
+              ghLink="https://github.com/lekshmiiyyer/Resume-similarity/blob/main/Resume_Similarity.ipynb"
+              // demoLink="https://www.figma.com/proto/b6MXrazRBtQWX1ZkHvpCCK/The-footprint?node-id=90-126&t=jxfFdVvRjm18KdU1-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=90%3A126"
+              techStackIcons={[<SiPython/>,<SiGooglecolab/>]}
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={diab}
+              isBlog={false}
+              title="mySugr"
+              description="mySugr is a user-friendly platform that allows users to upload their blood test reports and receive simplified explanations of medical terms using AI. Additionally, it features a chatbot that provides personalized insights and guidance based on the user's test results, promoting proactive health management."
+              ghLink="https://github.com/visiodei888/mySugr"
+               demoLink="https://devpost.com/software/mysugr"
+               techStackIcons={[<SiReact/>,<SiCss3/>,<SiPython/>,<SiGooglecolab/>,<SiDialogflow/>]}
             />
           </Col>
         </Row>
